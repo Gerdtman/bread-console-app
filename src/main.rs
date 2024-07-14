@@ -37,7 +37,8 @@ fn main() {
     println!("{} grams of water", ((grams_of_flour as f64) * hydration) - ((starter / 2)) as f64);
     println!("{} grams of salt", grams_of_flour as f64 * 0.02);
     println!("{} grams of sourdough starter", starter);
-
+    let mut input = String::new();
+     io::stdin().read_line(&mut input).unwrap();
     fn parse_user_input(input: String) -> Result<u32, std::num::ParseIntError>{
         input.trim().replace(" ", "").parse()
     }
